@@ -1,0 +1,18 @@
+DRAFT — California Privacy Protection Agency complaint
+(Review, then file yourself at https://cppa.ca.gov/ — "File a complaint".
+This tool never files complaints on your behalf.)
+
+Business:            $broker_name
+Opt-out channel:     $optout_url
+My requests:         $request_history
+Listing URL(s):      $listing_urls
+
+Summary:
+I am a California resident. I asked $broker_name to delete my personal
+information and to stop selling or sharing it under Cal. Civ. Code
+§§ 1798.105 and 1798.120. The business did not respond within the 45 days
+required by § 1798.130(a)(2), did not respond to a follow-up request, and
+$relist_sentence
+
+Attach: copies of the requests in the "outbox" folder and screenshots of the
+listing.

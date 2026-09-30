@@ -1,0 +1,4 @@
+# Run daily at 7:13am. `unlisted run` decides what's due: scans weekly,
+# web search monthly, deadline follow-ups and inbox checks every run.
+# Put secrets (SMTP/IMAP passwords, BRAVE_API_KEY) in ~/.unlisted/env (chmod 600).
+13 7 * * * . "$HOME/.unlisted/env"; "$HOME/.local/bin/unlisted" run >> "$HOME/.unlisted/cron.log" 2>&1

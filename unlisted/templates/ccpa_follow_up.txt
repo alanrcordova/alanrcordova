@@ -1,0 +1,24 @@
+Subject: Second Notice — Overdue CCPA Deletion Request — $full_name
+
+To the Privacy Team at $broker_name:
+
+On $original_date I submitted a request under the California Consumer
+Privacy Act (Cal. Civ. Code §§ 1798.105 and 1798.120) asking you to delete my
+personal information and stop selling or sharing it. More than 45 days have
+passed and I have not received a response or notice of an extension, as
+§ 1798.130(a)(2) requires.
+
+My identifying details are unchanged:
+
+  Name:           $full_name
+  Address(es):    $addresses
+  Phone(s):       $phones
+  Email(s):       $emails
+$listing_block
+Please complete the request and confirm in writing to $contact_email within
+15 days. If I do not hear back, I intend to file a complaint with the
+California Privacy Protection Agency.
+
+Sincerely,
+$full_name
+$date

@@ -1,0 +1,6 @@
+# UNVERIFIED example recipe — selectors must be checked against the live page
+# before use (open the opt-out page, inspect the fields, adjust).
+- goto: "{optout_url}"
+- fill: {selector: "input[name='url']", value: "{listing_url}"}
+- fill: {selector: "input[name='email']", value: "{email}"}
+- human: "Solve the CAPTCHA if shown, click Opt Out, then press Enter here."

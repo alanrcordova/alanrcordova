@@ -1,0 +1,47 @@
+Subject: CCPA Request to Delete and Opt Out — $full_name
+
+To the Privacy Team at $broker_name:
+
+I am a California resident. Under the California Consumer Privacy Act, as
+amended by the California Privacy Rights Act (Cal. Civ. Code § 1798.100 et
+seq.), I am exercising the following rights with respect to all personal
+information your business holds about me:
+
+1. Right to delete (§ 1798.105). Delete all personal information you have
+   collected about me, and direct any service providers and contractors to do
+   the same.
+
+2. Right to opt out of sale and sharing (§ 1798.120). Do not sell or share my
+   personal information, now or in the future.
+
+3. Right to limit use of sensitive personal information (§ 1798.121). Limit
+   any use of my sensitive personal information to the purposes permitted by
+   law.
+
+The information you may use to locate my records:
+
+  Name:           $full_name$aliases_line
+  Address(es):    $addresses
+  Phone(s):       $phones
+  Email(s):       $emails
+$listing_block
+Please do not treat this letter as a request to collect more information than
+you already have. Use the details above only to locate and delete my records.
+
+If you believe any of my information is exempt from deletion — for example,
+because it is "publicly available" information lawfully obtained from
+government records — please identify the specific information and the
+specific exemption you rely on. That exemption does not cover profiles
+compiled from commercial sources, inferences drawn about me, or contact
+details purchased from other businesses; please delete those.
+
+If you are a data broker registered under the Delete Act (§ 1798.99.80 et
+seq.), please also process this as a deletion request under that law.
+
+Please confirm receipt within 10 business days and complete this request
+within 45 days, as the CCPA and its regulations require. Send your response
+to $contact_email.
+
+Sincerely,
+$full_name
+$date

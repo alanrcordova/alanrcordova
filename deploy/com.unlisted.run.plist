@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- macOS: copy to ~/Library/LaunchAgents/, replace YOU with your username,
+     then: launchctl load ~/Library/LaunchAgents/com.unlisted.run.plist
+     Secrets: this wrapper sources ~/.unlisted/env before running. -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.unlisted.run</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/sh</string><string>-c</string>
+    <string>. /Users/YOU/.unlisted/env; /Users/YOU/.local/bin/unlisted run</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>7</integer><key>Minute</key><integer>13</integer></dict>
+  <key>StandardOutPath</key><string>/Users/YOU/.unlisted/launchd.log</string>
+  <key>StandardErrorPath</key><string>/Users/YOU/.unlisted/launchd.log</string>
+</dict>
+</plist>

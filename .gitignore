@@ -1,0 +1,14 @@
+# Never commit personal data
+profile.yaml
+brokers.local.yaml
+*.db
+outbox/
+reports/
+.env
+env
+
+__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/

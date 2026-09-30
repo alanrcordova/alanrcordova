@@ -1,0 +1,12 @@
+# ~/.config/systemd/user/unlisted.timer
+# Enable with: systemctl --user enable --now unlisted.timer
+[Unit]
+Description=Run Unlisted daily
+
+[Timer]
+OnCalendar=*-*-* 07:13
+Persistent=true
+RandomizedDelaySec=30m
+
+[Install]
+WantedBy=timers.target

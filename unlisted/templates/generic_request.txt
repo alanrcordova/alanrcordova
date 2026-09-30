@@ -1,0 +1,19 @@
+Subject: Request to Remove My Personal Information — $full_name
+
+To the Privacy Team at $broker_name:
+
+Please remove all listings and records about me from your website and
+databases, stop selling or sharing my personal information, and do not
+republish it in the future.
+
+  Name:           $full_name$aliases_line
+  Address(es):    $addresses
+  Phone(s):       $phones
+  Email(s):       $emails
+$listing_block
+Please use these details only to locate and remove my records, and confirm
+completion to $contact_email.
+
+Thank you,
+$full_name
+$date

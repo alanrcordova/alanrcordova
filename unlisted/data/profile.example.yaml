@@ -1,0 +1,31 @@
+# Your details. This file stays on your computer (~/.unlisted/profile.yaml).
+# Only list information you want removed — the tool uses it to recognise
+# listings about you and to fill in removal requests.
+
+full_name: Jane Q Public
+aliases: [Jane Public, Jane Doe-Public]     # other names you've used
+birth_year: 1980                             # helps tell you apart from namesakes
+contact_email: optouts@example.com           # use a dedicated alias for opt-outs
+emails: [jane@example.com]
+phones: ["(555) 555-0100"]
+addresses:
+  - {street: 123 Main St, city: San Diego, state: CA, zip: "92101"}
+  - {street: 9 Old Rd, city: Oakland, state: CA, zip: "94601"}   # past addresses help too
+relatives: [John Public]                     # names that appear on your listings
+california_resident: true                    # false → no CCPA/Delete Act claims in letters
+
+settings:
+  scan_every_days: 7          # weekly scan of registry sites
+  discover_every_days: 30     # monthly web search for other sites (needs BRAVE_API_KEY)
+  proactive: true             # request removal everywhere, not only where found
+  auto_send: false            # true → email requests are sent, not just drafted
+  auto_open_verify_links: false
+  smtp:                       # needed only for auto_send
+    # host: smtp.example.com
+    # port: 587
+    # username: optouts@example.com
+    # password_env: UNLISTED_SMTP_PASSWORD
+  imap:                       # needed only for the inbox watcher
+    # host: imap.example.com
+    # username: optouts@example.com
+    # password_env: UNLISTED_IMAP_PASSWORD

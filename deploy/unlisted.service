@@ -1,0 +1,8 @@
+# ~/.config/systemd/user/unlisted.service
+[Unit]
+Description=Unlisted privacy sweep
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.unlisted/env
+ExecStart=%h/.local/bin/unlisted run

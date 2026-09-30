@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unlisted"
+version = "0.1.0"
+description = "Find and remove your personal information from data brokers, on a schedule."
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+forms = ["playwright>=1.45"]
+
+[project.scripts]
+unlisted = "unlisted.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["unlisted*"]
+
+[tool.setuptools.package-data]
+"unlisted.data" = ["*.yaml"]
+"unlisted.templates" = ["*.txt"]
+"unlisted.recipes" = ["*.yaml"]

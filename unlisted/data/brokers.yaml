@@ -1,0 +1,241 @@
+# Broker registry.
+#
+# Every entry is UNVERIFIED until `last_verified` is set: broker sites change
+# their URLs and forms often. Run `unlisted verify-registry` from your own
+# machine to check that each URL still resolves, then update last_verified.
+#
+# search_url placeholders: {first} {last} {full_slug} {city_slug} {state}
+#   {state_name_slug} {phone_digits}
+# optout.method: drop | email | web_form | account
+# relist_days: how long after a confirmed removal to re-check.
+
+brokers:
+  - id: ca_drop
+    name: California DROP (all registered data brokers)
+    category: government
+    optout:
+      method: drop
+      url: https://privacy.ca.gov/drop/
+      notes: >
+        One request reaches every data broker registered in California.
+        Brokers must process DROP requests from Aug 1, 2026 and re-check every
+        45 days. Do this first.
+    relist_days: 365
+    priority: 0
+    last_verified: null
+
+  - id: spokeo
+    name: Spokeo
+    category: people_search
+    search_url: https://www.spokeo.com/{first}-{last}/{state_name_slug}/{city_slug}
+    optout:
+      method: web_form
+      url: https://www.spokeo.com/optout
+      requires: [listing_url, email]
+      recipe: spokeo
+    verify_domains: [spokeo.com]
+    relist_days: 90
+    priority: 1
+    last_verified: null
+
+  - id: whitepages
+    name: Whitepages
+    category: people_search
+    search_url: https://www.whitepages.com/name/{first}-{last}/{city_slug}-{state}
+    optout:
+      method: web_form
+      url: https://www.whitepages.com/suppression-requests
+      requires: [listing_url, phone]
+      notes: Verification is by an automated phone call.
+    verify_domains: [whitepages.com]
+    relist_days: 90
+    priority: 1
+    last_verified: null
+
+  - id: peopleconnect
+    name: PeopleConnect (Intelius, TruthFinder, Instant Checkmate, US Search, ZabaSearch)
+    category: people_search
+    optout:
+      method: web_form
+      url: https://suppression.peopleconnect.us/login
+      requires: [email]
+      notes: One suppression covers all PeopleConnect brands.
+    verify_domains: [peopleconnect.us, intelius.com, truthfinder.com, instantcheckmate.com]
+    relist_days: 90
+    priority: 1
+    last_verified: null
+
+  - id: beenverified
+    name: BeenVerified (also PeopleLooker, NeighborWho)
+    category: people_search
+    optout:
+      method: web_form
+      url: https://www.beenverified.com/app/optout/search
+      requires: [email]
+    verify_domains: [beenverified.com]
+    relist_days: 90
+    priority: 1
+    last_verified: null
+
+  - id: radaris
+    name: Radaris
+    category: people_search
+    search_url: https://radaris.com/p/{first}/{last}/
+    optout:
+      method: web_form
+      url: https://radaris.com/control/privacy
+      requires: [listing_url, email]
+    verify_domains: [radaris.com]
+    relist_days: 60
+    priority: 1
+    last_verified: null
+
+  - id: fastpeoplesearch
+    name: FastPeopleSearch
+    category: people_search
+    search_url: https://www.fastpeoplesearch.com/name/{first}-{last}_{city_slug}-{state}
+    optout:
+      method: web_form
+      url: https://www.fastpeoplesearch.com/removal
+      requires: [email]
+    verify_domains: [fastpeoplesearch.com]
+    relist_days: 60
+    priority: 1
+    last_verified: null
+
+  - id: truepeoplesearch
+    name: TruePeopleSearch
+    category: people_search
+    search_url: https://www.truepeoplesearch.com/results?name={first}%20{last}&citystatezip={city_slug}%2C%20{state}
+    optout:
+      method: web_form
+      url: https://www.truepeoplesearch.com/removal
+      requires: [listing_url, email]
+    verify_domains: [truepeoplesearch.com]
+    relist_days: 60
+    priority: 1
+    last_verified: null
+
+  - id: peoplefinders
+    name: PeopleFinders
+    category: people_search
+    optout:
+      method: web_form
+      url: https://www.peoplefinders.com/opt-out
+      requires: [email]
+    verify_domains: [peoplefinders.com]
+    relist_days: 90
+    priority: 2
+    last_verified: null
+
+  - id: nuwber
+    name: Nuwber
+    category: people_search
+    search_url: https://nuwber.com/search?name={first}%20{last}&city={city_slug}&state={state}
+    optout:
+      method: web_form
+      url: https://nuwber.com/removal/link
+      requires: [listing_url, email]
+    verify_domains: [nuwber.com]
+    relist_days: 90
+    priority: 2
+    last_verified: null
+
+  - id: thatsthem
+    name: ThatsThem
+    category: people_search
+    search_url: https://thatsthem.com/name/{first}-{last}/{city_slug}-{state}
+    optout:
+      method: web_form
+      url: https://thatsthem.com/optout
+      requires: [email]
+    verify_domains: [thatsthem.com]
+    relist_days: 90
+    priority: 2
+    last_verified: null
+
+  - id: usphonebook
+    name: USPhonebook
+    category: people_search
+    optout:
+      method: web_form
+      url: https://www.usphonebook.com/opt-out
+      requires: [listing_url]
+    verify_domains: [usphonebook.com]
+    relist_days: 90
+    priority: 2
+    last_verified: null
+
+  - id: searchpeoplefree
+    name: SearchPeopleFree
+    category: people_search
+    optout:
+      method: web_form
+      url: https://www.searchpeoplefree.com/opt-out
+      requires: [listing_url, email]
+    verify_domains: [searchpeoplefree.com]
+    relist_days: 90
+    priority: 2
+    last_verified: null
+
+  - id: clustrmaps
+    name: ClustrMaps
+    category: people_search
+    optout:
+      method: web_form
+      url: https://clustrmaps.com/bl/opt-out
+      requires: [listing_url]
+    verify_domains: [clustrmaps.com]
+    relist_days: 90
+    priority: 2
+    last_verified: null
+
+  - id: advancedbackgroundchecks
+    name: Advanced Background Checks
+    category: people_search
+    optout:
+      method: web_form
+      url: https://www.advancedbackgroundchecks.com/removal
+      requires: [email]
+    verify_domains: [advancedbackgroundchecks.com]
+    relist_days: 90
+    priority: 2
+    last_verified: null
+
+  - id: acxiom
+    name: Acxiom
+    category: marketing_broker
+    optout:
+      method: web_form
+      url: https://isapps.acxiom.com/optout/optout.aspx
+      requires: [email, address]
+    verify_domains: [acxiom.com]
+    relist_days: 365
+    priority: 2
+    last_verified: null
+
+  - id: lexisnexis
+    name: LexisNexis Risk Solutions
+    category: risk_broker
+    optout:
+      method: web_form
+      url: https://optout.lexisnexis.com/
+      requires: [email, address]
+      notes: May require identity verification; some data is exempt (e.g. FCRA-regulated).
+    verify_domains: [lexisnexis.com]
+    relist_days: 365
+    priority: 2
+    last_verified: null
+
+  - id: google_results_about_you
+    name: Google Search — Results about you
+    category: search_engine
+    optout:
+      method: account
+      url: https://myactivity.google.com/results-about-you
+      notes: >
+        Request removal of search results showing your phone, address or email.
+        Turn on alerts so Google emails you when new results appear.
+    relist_days: 30
+    priority: 1
+    last_verified: null
